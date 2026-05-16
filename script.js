@@ -258,9 +258,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    let isShowingJourney = false;
     function showJourney() {
-        populateCarousel();
-        populateJourney();
+        if (isShowingJourney) return;
+        isShowingJourney = true;
+        setTimeout(() => { isShowingJourney = false; }, 1000); // Debounce for 1s
+
+        try {
+            populateCarousel();
+        } catch(e) {
+            console.error(e);
+        }
+
+        try {
+            populateJourney();
+        } catch(e) {
+            console.error(e);
+        }
+
         showSection('journey-scroller');
     }
 
@@ -343,6 +358,10 @@ document.addEventListener('DOMContentLoaded', () => {
     window.showVictoryScreen = showVictoryScreen;
     window.createConfetti = createConfetti;
     window.playMusic = playMusic;
+    window.showJourney = showJourney;
+    window.resetGame = resetGame;
+    window.showSection = showSection;
+    window.startGame = startGame;
 
     init();
 });

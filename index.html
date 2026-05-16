@@ -24,7 +24,9 @@
             <p class="subtitle">A Journey of 365 Days</p>
             <button id="start-game" class="btn-primary">Start Matching</button>
             <!-- Hidden Cheat Button - Only on Splash -->
-            <div id="cheat-btn" onclick="playMusic(); showVictoryScreen();" style="position: absolute; bottom: 0; right: 0; width: 60px; height: 60px; cursor: pointer; opacity: 0.01;"></div>
+            <div id="cheat-btn" onclick="playMusic(); showVictoryScreen();"
+                style="position: absolute; bottom: 0; right: 0; width: 60px; height: 60px; cursor: pointer; opacity: 0.01;">
+            </div>
         </div>
     </section>
 
@@ -62,14 +64,14 @@
     <section id="victory-screen" class="overlay">
         <div class="content">
             <div class="confetti-container"></div>
-            <h1 class="victory-title">Happy 1st Anniversary!</h1>
+            <h1 class="victory-title">Happy 1st Anniversary Lovey of My Life!</h1>
             <p class="victory-msg">Happy 1st Anniversary! We’ve reached our very first beautiful milestone together.
                 Every laugh we shared, every tear we shed, and even our little sulks have become treasures I never
                 expected to find in my life. Every moment with you is a memory I hold dear. Here’s to a lifetime of more
                 stories, more love, and more us!</p>
             <div class="victory-actions">
-                <button id="view-journey" class="btn-primary">View Our Journey</button>
-                <button id="play-again" class="btn-secondary">Relive the Game</button>
+                <button id="view-journey" class="btn-primary" onclick="window.showJourney()" ontouchstart="window.showJourney()">View Our Journey</button>
+                <button id="play-again" class="btn-secondary" onclick="window.resetGame()" ontouchstart="window.resetGame()">Relive the Game</button>
             </div>
         </div>
     </section>
@@ -78,10 +80,10 @@
     <section id="journey-scroller" class="overlay">
         <div class="sticky-top">
             <header class="journey-header">
-                <button id="back-to-menu" class="btn-icon">←</button>
+                <button id="back-to-menu" class="btn-icon" onclick="window.showSection('splash-screen')" ontouchstart="window.showSection('splash-screen')">←</button>
                 <h1 class="journey-title">Our Journey</h1>
             </header>
-            
+
             <div class="memory-slider">
                 <div id="slider-track" class="slider-track">
                     <!-- Injected by JS -->
@@ -95,7 +97,7 @@
 
         <footer class="journey-footer">
             <p>Our journey is just beginning...</p>
-            <button id="back-to-menu-footer" class="btn-primary">Back to Start</button>
+            <button id="back-to-menu-footer" class="btn-primary" onclick="window.showSection('splash-screen')" ontouchstart="window.showSection('splash-screen')">Back to Start</button>
         </footer>
     </section>
 
