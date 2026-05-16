@@ -2,40 +2,40 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Configuration & Data ---
     // --- Game Memories (For the Matching Grid) ---
     const gameMemories = [
-        { id: 1, title: "A Humble Beginning", desc: "The start of us. I still remember the nerves and the joy of being invited to your home for the first time during our courting stage.", img: "assets/memory1.jpeg" },
-        { id: 2, title: "Welcome, Mochi!", desc: "The moment our family grew by one tiny paw. Surprising you with little Mochi was a dream come true.", img: "assets/memory2.jpg" },
-        { id: 3, title: "Ilocos Adventures", desc: "Exploring the historic charm of Ilocos Norte together—the best view was always you.", img: "assets/memory3.jpeg" },
-        { id: 4, title: "Partnered in Zambales", desc: "It was a team-building trip, but the only team I wanted to be on was ours.", img: "assets/memory4.jpg" },
-        { id: 5, title: "A Farmhouse Birthday", desc: "Celebrating your special day at the Farmhouse, where I gave you the infinity necklace as a promise of forever.", img: "assets/memory5.jpeg" },
-        { id: 6, title: "Chilly Baguio Mornings", desc: "Shivering in the cold Baguio breeze, but finding all the warmth I needed right beside you.", img: "assets/memory6.jpeg" },
-        { id: 7, title: "Office Chikahan", desc: "Chilling at the office and catching up on the latest gossip.", img: "assets/memory7.jpeg" },
-        { id: 8, title: "Sun, Sand, and Us", desc: "Golden hours and salty hair. Just us enjoying the rhythm of the waves under the summer sun.", img: "assets/memory8.jpg" },
-        { id: 9, title: "Under the Starlight", desc: "Quiet late-night walks where the world felt so small and perfect under the night sky.", img: "assets/memory9.jpeg" },
-        { id: 10, title: "Sailing Into the Blue", desc: "Drifting through the ocean waves, feeling the sea breeze and the freedom of being with you.", img: "assets/memory10.jpeg" },
-        { id: 11, title: "Poolside Laughter", desc: "Summer days spent splashing around and sharing laughs that echoed in the sun.", img: "assets/memory11.jpeg" },
-        { id: 12, title: "Level Up Together", desc: "From high scores to deep bonds. Our first gaming session was the start of a whole new adventure.", img: "assets/memory12.jpeg" },
+        { id: 1, title: "A Humble Beginning", desc: "The start of us. I still remember the nerves and the joy of being invited to your home for the first time during our courting stage.", img: "assets/memory1.JPEG" },
+        { id: 2, title: "Welcome, Mochi!", desc: "The moment our family grew by one tiny paw. Surprising you with little Mochi was a dream come true.", img: "assets/memory2.JPG" },
+        { id: 3, title: "Ilocos Adventures", desc: "Exploring the historic charm of Ilocos Norte together—the best view was always you.", img: "assets/memory3.JPEG" },
+        { id: 4, title: "Partnered in Zambales", desc: "It was a team-building trip, but the only team I wanted to be on was ours.", img: "assets/memory4.JPG" },
+        { id: 5, title: "A Farmhouse Birthday", desc: "Celebrating your special day at the Farmhouse, where I gave you the infinity necklace as a promise of forever.", img: "assets/memory5.JPEG" },
+        { id: 6, title: "Chilly Baguio Mornings", desc: "Shivering in the cold Baguio breeze, but finding all the warmth I needed right beside you.", img: "assets/memory6.JPEG" },
+        { id: 7, title: "Office Chikahan", desc: "Chilling at the office and catching up on the latest gossip.", img: "assets/memory7.JPEG" },
+        { id: 8, title: "Sun, Sand, and Us", desc: "Golden hours and salty hair. Just us enjoying the rhythm of the waves under the summer sun.", img: "assets/memory8.JPG" },
+        { id: 9, title: "Under the Starlight", desc: "Quiet late-night walks where the world felt so small and perfect under the night sky.", img: "assets/memory9.JPEG" },
+        { id: 10, title: "Sailing Into the Blue", desc: "Drifting through the ocean waves, feeling the sea breeze and the freedom of being with you.", img: "assets/memory10.JPEG" },
+        { id: 11, title: "Poolside Laughter", desc: "Summer days spent splashing around and sharing laughs that echoed in the sun.", img: "assets/memory11.JPEG" },
+        { id: 12, title: "Level Up Together", desc: "From high scores to deep bonds. Our first gaming session was the start of a whole new adventure.", img: "assets/memory12.JPEG" },
         { id: 13, title: "Ramen & Romance", desc: "Our very first date at Cafe Fifty. Sharing ramen and realizing this was the start of something truly special.", img: "assets/memory13.jpg" },
-        { id: 14, title: "Garden Whispers", desc: "A quiet, beautiful moment lost in the flowers, where everything felt in full color.", img: "assets/memory14.jpg" },
-        { id: 15, title: "Perya Magic", desc: "Riding the Ferris wheel and enjoying the neon lights. The best part of the carnival was holding your hand.", img: "assets/memory15.jpeg" }
+        { id: 14, title: "Garden Whispers", desc: "A quiet, beautiful moment lost in the flowers, where everything felt in full color.", img: "assets/memory14.JPG" },
+        { id: 15, title: "Perya Magic", desc: "Riding the Ferris wheel and enjoying the neon lights. The best part of the carnival was holding your hand.", img: "assets/memory15.JPEG" }
     ];
 
     // --- Journey Memories (For the Scrapbook Scroller) ---
     const journeyMemories = [
         { id: 1, title: "Where it all started", desc: "It all started here at MPDO-Tourism Year-End Party where we play basketball.", img: "assets/journey/1.jpg" },
-        { id: 2, title: "My Birthday", desc: "We celebrated my Birthday in the office where instead of you having a surprise, I am the one who had surprise.", img: "assets/journey/2.jpeg" },
-        { id: 3, title: "Surprise Gift", desc: "Mochi(cat)! is the suprise gift you wouldn't expect", img: "assets/journey/3.mp4" },
-        { id: 4, title: "Partnered in Zambales", desc: "It was a team-building trip, but the only team I wanted to be on was ours.", img: "assets/memory4.jpg" },
-        { id: 5, title: "A Farmhouse Birthday", desc: "Celebrating your special day at the Farmhouse, where I gave you the infinity necklace as a promise of forever.", img: "assets/memory5.jpeg" },
-        { id: 6, title: "Chilly Baguio Mornings", desc: "Shivering in the cold Baguio breeze, but finding all the warmth I needed right beside you.", img: "assets/memory6.jpeg" },
-        { id: 7, title: "Office Chikahan", desc: "Chilling at the office and catching up on the latest gossip.", img: "assets/memory7.jpeg" },
-        { id: 8, title: "Sun, Sand, and Us", desc: "Golden hours and salty hair. Just us enjoying the rhythm of the waves under the summer sun.", img: "assets/memory8.jpg" },
-        { id: 9, title: "Under the Starlight", desc: "Quiet late-night walks where the world felt so small and perfect under the night sky.", img: "assets/memory9.jpeg" },
-        { id: 10, title: "Sailing Into the Blue", desc: "Drifting through the ocean waves, feeling the sea breeze and the freedom of being with you.", img: "assets/memory10.jpeg" },
-        { id: 11, title: "Poolside Laughter", desc: "Summer days spent splashing around and sharing laughs that echoed in the sun.", img: "assets/memory11.jpeg" },
-        { id: 12, title: "Level Up Together", desc: "From high scores to deep bonds. Our first gaming session was the start of a whole new adventure.", img: "assets/memory12.jpeg" },
+        { id: 2, title: "My Birthday", desc: "We celebrated my Birthday in the office where instead of you having a surprise, I am the one who had surprise.", img: "assets/journey/2.JPEG" },
+        { id: 3, title: "Surprise Gift", desc: "Mochi(cat)! is the suprise gift you wouldn't expect", img: "assets/journey/3.MP4" },
+        { id: 4, title: "Partnered in Zambales", desc: "It was a team-building trip, but the only team I wanted to be on was ours.", img: "assets/memory4.JPG" },
+        { id: 5, title: "A Farmhouse Birthday", desc: "Celebrating your special day at the Farmhouse, where I gave you the infinity necklace as a promise of forever.", img: "assets/memory5.JPEG" },
+        { id: 6, title: "Chilly Baguio Mornings", desc: "Shivering in the cold Baguio breeze, but finding all the warmth I needed right beside you.", img: "assets/memory6.JPEG" },
+        { id: 7, title: "Office Chikahan", desc: "Chilling at the office and catching up on the latest gossip.", img: "assets/memory7.JPEG" },
+        { id: 8, title: "Sun, Sand, and Us", desc: "Golden hours and salty hair. Just us enjoying the rhythm of the waves under the summer sun.", img: "assets/memory8.JPG" },
+        { id: 9, title: "Under the Starlight", desc: "Quiet late-night walks where the world felt so small and perfect under the night sky.", img: "assets/memory9.JPEG" },
+        { id: 10, title: "Sailing Into the Blue", desc: "Drifting through the ocean waves, feeling the sea breeze and the freedom of being with you.", img: "assets/memory10.JPEG" },
+        { id: 11, title: "Poolside Laughter", desc: "Summer days spent splashing around and sharing laughs that echoed in the sun.", img: "assets/memory11.JPEG" },
+        { id: 12, title: "Level Up Together", desc: "From high scores to deep bonds. Our first gaming session was the start of a whole new adventure.", img: "assets/memory12.JPEG" },
         { id: 13, title: "Ramen & Romance", desc: "Our very first date at Cafe Fifty. Sharing ramen and realizing this was the start of something truly special.", img: "assets/memory13.jpg" },
-        { id: 14, title: "Garden Whispers", desc: "A quiet, beautiful moment lost in the flowers, where everything felt in full color.", img: "assets/memory14.jpg" },
-        { id: 15, title: "Perya Magic", desc: "Riding the Ferris wheel and enjoying the neon lights. The best part of the carnival was holding your hand.", img: "assets/memory15.jpeg" }
+        { id: 14, title: "Garden Whispers", desc: "A quiet, beautiful moment lost in the flowers, where everything felt in full color.", img: "assets/memory14.JPG" },
+        { id: 15, title: "Perya Magic", desc: "Riding the Ferris wheel and enjoying the neon lights. The best part of the carnival was holding your hand.", img: "assets/memory15.JPEG" }
     ];
 
     // --- Extra Images (For the Side-Scrolling Carousel) ---
