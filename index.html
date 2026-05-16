@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Our Story | Memory Card Match</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-animation"></div>
+    <audio id="bg-music" src="assets/music.mp3" loop></audio>
+
+    <!-- Splash Screen -->
+    <section id="splash-screen" class="overlay active">
+        <div class="content">
+            <h1 class="title">Our Story</h1>
+            <p class="subtitle">A Journey of 365 Days</p>
+            <button id="start-game" class="btn-primary">Start Matching</button>
+            <!-- Hidden Cheat Button - Only on Splash -->
+            <div id="cheat-btn" onclick="playMusic(); showVictoryScreen();" style="position: absolute; bottom: 0; right: 0; width: 60px; height: 60px; cursor: pointer; opacity: 0.01;"></div>
+        </div>
+    </section>
+
+    <!-- Game UI -->
+    <main id="game-container">
+        <header class="game-header">
+            <div class="stats">
+                <span id="matches-count">Matches: 0 / 15</span>
+                <span id="moves-count">Moves: 0</span>
+            </div>
+            <button id="reset-game" class="btn-secondary">Restart</button>
+        </header>
+
+        <div id="card-grid" class="grid">
+            <!-- Cards will be injected by JavaScript -->
+        </div>
+    </main>
+
+    <!-- Memory Modal -->
+    <div id="memory-modal" class="modal">
+        <div class="modal-content glass">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="image-container">
+                    <img id="modal-image" src="" alt="Memory Image">
+                </div>
+                <h2 id="modal-title">Memory Title</h2>
+                <p id="modal-description">Memory description goes here...</p>
+                <button class="btn-close-modal btn-primary" style="margin-top: 20px;">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Victory Screen -->
+    <section id="victory-screen" class="overlay">
+        <div class="content">
+            <div class="confetti-container"></div>
+            <h1 class="victory-title">Happy 1st Anniversary!</h1>
+            <p class="victory-msg">Happy 1st Anniversary! We’ve reached our very first beautiful milestone together.
+                Every laugh we shared, every tear we shed, and even our little sulks have become treasures I never
+                expected to find in my life. Every moment with you is a memory I hold dear. Here’s to a lifetime of more
+                stories, more love, and more us!</p>
+            <div class="victory-actions">
+                <button id="view-journey" class="btn-primary">View Our Journey</button>
+                <button id="play-again" class="btn-secondary">Relive the Game</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Memory Journey Page -->
+    <section id="journey-scroller" class="overlay">
+        <header class="journey-header">
+            <button id="back-to-menu" class="btn-icon">←</button>
+            <h1 class="journey-title">Our Journey</h1>
+        </header>
+        
+        <div class="memory-slider">
+            <div id="slider-track" class="slider-track">
+                <!-- Injected by JS -->
+            </div>
+        </div>
+
+        <div id="journey-list" class="scroller-content">
+            <!-- Memories will be injected here -->
+        </div>
+
+        <footer class="journey-footer">
+            <p>Our journey is just beginning...</p>
+            <button id="back-to-menu-footer" class="btn-primary">Back to Start</button>
+        </footer>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
